@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Home feed</title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/angular-route.min.js">
+
+    </script>
+  </head>
+  <body ng-app="main">
+    <ion-pane>
+      <ion-header-bar class="bar-dark" ng-controller="contentController">
+        <h1 class="title">{{ title }}</h1>
+      </ion-header-bar>
+      <ion-content class="has-header">
+        <div>
+          <div ng-view="content"></div>
+        </div>
+      </ion-content>
+        <div ng-include src="'navbar.html'"></div>
+    </ion-pane>
+  </body>
+</html>
