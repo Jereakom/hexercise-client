@@ -1,0 +1,22 @@
+<div ng-controller="profileController">
+  <h1>User view</h1>
+  <table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Posts</th>
+            <th>Comments</th>
+            <th>Bio</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="data in profile">
+            <td>{{ data.username }}</td>
+            <td>{{ data.posts }}</td>
+            <td>{{ data.comments }}</td>
+            <td>{{ data.bio }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
